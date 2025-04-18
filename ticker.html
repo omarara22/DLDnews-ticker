@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -13,22 +12,23 @@
     }
     .ticker {
       background: #f2f2f2;
-      padding: 10px;
       overflow: hidden;
       position: relative;
-      white-space: nowrap;
       border: 1px solid #ccc;
+      height: 50px;
     }
     .ticker-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 15s linear infinite;
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: scroll-left 30s linear infinite;
       color: #333;
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 50px;
     }
     @keyframes scroll-left {
       0% {
-        transform: translateX(0%);
+        transform: translateX(100%);
       }
       100% {
         transform: translateX(-100%);
@@ -39,7 +39,9 @@
 <body dir="rtl">
   <div class="ticker">
     <div class="ticker-text">
-      Announcement: Operating systems will be down on Friday, April 25, 2025, from 10 AM for maintenance | 🎉 Congratulations to employee Omar on his promotion | Team meeting on Monday, April 21, 2025, at 10 AM إعلان: سيتم إيقاف انظمة التشغيل يوم الجمعة 25 ابريل  2025 من الساعة 10 صباحً للصيانة | 🎉 تهنئة للموظف عمر بمناسبة الترقية |  اجتماع الفريق يوم الإثنين 21 ابريل 2025 الساعة 10 صباحًا
+      📢 إعلان: سيتم إيقاف انظمة التشغيل يوم الجمعة 25 ابريل 2025 من الساعة 10 صباحًا للصيانة |
+      🎉 تهنئة للزميلة علياء محمد لانضمامها لفريق تدريب دائرة الاراضي والاملاك |
+      📅 اجتماع طارئ للفريق يوم الإثنين 21 ابريل 2025 الساعة 10 صباحًا
     </div>
   </div>
 </body>
