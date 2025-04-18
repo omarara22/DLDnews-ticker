@@ -1,24 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Multilingual News Ticker</title>
+  <title>شريط الأخبار</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
       font-family: 'Segoe UI', sans-serif;
-    }
-    .controls {
-      text-align: center;
-      margin: 10px;
-    }
-    .controls button {
-      margin: 0 10px;
-      padding: 6px 12px;
-      font-size: 16px;
-      cursor: pointer;
     }
     .ticker {
       background: #f2f2f2;
@@ -31,7 +21,7 @@
       position: absolute;
       white-space: nowrap;
       will-change: transform;
-      animation: scroll-left 20s linear infinite;
+      animation: scroll-left 30s linear infinite;
       color: #333;
       font-size: 18px;
       line-height: 50px;
@@ -46,32 +36,13 @@
     }
   </style>
 </head>
-<body>
-  <div class="controls">
-    <button onclick="switchLang('ar')">العربية</button>
-    <button onclick="switchLang('en')">English</button>
-  </div>
-
+<body dir="rtl">
   <div class="ticker">
-    <div id="ticker-text" class="ticker-text">
-      <!-- سيتم ملء النص تلقائيًا بالجافاسكريبت -->
+    <div class="ticker-text">
+      📢 إعلان: سيتم إيقاف انظمة التشغيل يوم الجمعة 25 ابريل 2025 من الساعة 10 صباحًا للصيانة |
+      🎉 تهنئة للزميلة علياء محمد لانضمامها لفريق تدريب دائرة الاراضي والاملاك |
+      📅 اجتماع طارئ للفريق يوم الإثنين 21 ابريل 2025 الساعة 10 صباحًا
     </div>
   </div>
-
-  <script>
-    const news = {
-      ar: "📢 إعلان: سيتم إيقاف انظمة التشغيل يوم الجمعة 25 ابريل 2025 من الساعة 10 صباحًا للصيانة | 🎉 تهنئة للزميلة علياء محمد لانضمامها لفريق تدريب دائرة الاراضي والاملاك | 📅 اجتماع طارئ للفريق يوم الإثنين 21 ابريل 2025 الساعة 10 صباحًا",
-      en: "📢 Notice: All operating systems will be shut down for maintenance on Friday, April 25, 2025, starting from 10:00 AM | 🎉 Congratulations to Alia Mohamed on joining the Dubai Land Department Training Team | 📅 Urgent meeting for the team on Monday, April 21, 2025 at 10:00 AM"
-    };
-
-    function switchLang(lang) {
-      const textEl = document.getElementById('ticker-text');
-      textEl.innerText = news[lang];
-      document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-    }
-
-    // تعيين اللغة الافتراضية عند التحميل
-    window.onload = () => switchLang('ar');
-  </script>
 </body>
 </html>
